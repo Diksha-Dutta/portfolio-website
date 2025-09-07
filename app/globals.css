@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #AB4E52,   /* your main crimson */
+    #893F45,   /* darker red for depth */
+    #BF4F51, 
+    #CD5C5C , /* black accent */
+    #AB4E52
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
